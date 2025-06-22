@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team 404 Portfolio - Projects & Team</title>
+    <meta name="description" content="Team 404 Portfolio: Meet our team, explore our projects, and discover our creative process. Futuristic, interactive, and innovative web experiences.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://team404-wed.vercel.app/main.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Team 404 Portfolio - Projects & Team">
+    <meta property="og:description" content="Team 404 Portfolio: Meet our team, explore our projects, and discover our creative process. Futuristic, interactive, and innovative web experiences.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://team404-wed.vercel.app/main.html">
+    <meta property="og:image" content="/assets/favicon.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Team 404 Portfolio - Projects & Team">
+    <meta name="twitter:description" content="Team 404 Portfolio: Meet our team, explore our projects, and discover our creative process. Futuristic, interactive, and innovative web experiences.">
+    <meta name="twitter:image" content="/assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;800&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/mainpage.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/css/phosphor.css">
+</head>
+<body class="bg-black text-white font-exo">
+    <!-- Floating 3D Elements Canvas -->
+    <canvas id="floating-3d" class="floating-3d-canvas"></canvas>
+    
+    <!-- Main 3D Canvas -->
+    <canvas id="main-3d" class="main-3d-canvas"></canvas>
+    
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="nav-dot active" data-tooltip="Home" data-target="hero"></div>
+        <div class="nav-dot" data-tooltip="About" data-target="about"></div>
+        <div class="nav-dot" data-tooltip="Projects" data-target="projects"></div>
+        <div class="nav-dot" data-tooltip="Contact" data-target="contact"></div>
+    </div>
+    
+    <!-- Floating Mini Icons -->
+    <div class="fixed top-10 left-20 z-10 md:block hidden">
+        <i class="ph ph-gear text-2xl text-cyan-400 animate-spin-slow opacity-70"></i>
+    </div>
+    <div class="fixed top-20 right-20 z-10 md:block hidden">
+        <i class="ph ph-circuit-board text-2xl text-pink-400 animate-pulse opacity-60"></i>
+    </div>
+    <div class="fixed bottom-32 left-16 z-10 md:block hidden">
+        <i class="ph ph-cpu text-2xl text-orange-400 animate-float opacity-50"></i>
+    </div>
+    <div class="fixed top-1/2 right-10 z-10 md:block hidden">
+        <i class="ph ph-hard-drives text-xl text-green-400 animate-bounce-slow opacity-40"></i>
+    </div>
+    
+    <!-- Main Content -->
+    <main class="relative z-10">
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center relative">
+            <div class="text-center px-4 max-w-6xl">
+                <div class="mb-8">
+                    <i class="ph ph-lightning text-4xl md:text-6xl text-cyan-400 animate-pulse-slow"></i>
+                </div>
+                <h1 class="font-orbitron font-black text-5xl md:text-8xl lg:text-9xl mb-6 gradient-text">
+                    TEAM 404
+                </h1>
+                <p class="font-rajdhani text-xl md:text-3xl lg:text-4xl text-gray-300 mb-12 font-light">
+                    Where Innovation Meets Excellence
+                </p>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+                    <div class="glass-effect px-6 py-3 rounded-lg hover-glow">
+                        <span class="font-orbitron text-lg md:text-xl text-cyan-400">6</span>
+                        <p class="text-sm text-gray-400">Team Members</p>
+                    </div>
+                    <div class="glass-effect px-6 py-3 rounded-lg hover-glow">
+                        <span class="font-orbitron text-lg md:text-xl text-pink-400">50+</span>
+                        <p class="text-sm text-gray-400">Projects Completed</p>
+                    </div>
+                    <div class="glass-effect px-6 py-3 rounded-lg hover-glow">
+                        <span class="font-orbitron text-lg md:text-xl text-orange-400">5+</span>
+                        <p class="text-sm text-gray-400">Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="min-h-screen py-20 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20">
+                    <h2 class="font-orbitron font-bold text-4xl md:text-6xl mb-6 text-cyan-400">
+                        <i class="ph ph-users text-5xl mr-4"></i>
+                        Meet Our Team
+                    </h2>
+                    <p class="font-rajdhani text-xl md:text-2xl text-gray-300 font-light max-w-3xl mx-auto">
+                        A collective of passionate developers, designers, and innovators united by a shared vision of creating extraordinary digital experiences.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Team Leader -->
+                    <div class="glass-effect rounded-lg overflow-hidden hover-glow group relative">
+                        <div class="animated-border"></div>
+                        <div class="relative z-10 p-6 flex flex-col items-center">
+                            <i class="ph ph-crown text-4xl text-cyan-400 mb-4"></i>
+                            <h3 class="font-orbitron font-bold text-xl text-center mb-2 text-cyan-400">Wednesday</h3>
+                            <p class="text-center text-pink-400 font-rajdhani font-semibold mb-4">Team Leader & Full-Stack Developer</p>
+                            <p class="text-sm text-gray-300 text-center mb-4">Creative developer with expertise in React, Node.js, and 3D web experiences. Leads with vision and technical excellence.</p>
+                            <div class="flex justify-center mt-2 space-x-3">
+                                <a href="https://github.com/evilshxt" target="_blank"><i class="ph ph-github-logo text-xl text-gray-400 hover:text-cyan-400 cursor-pointer transition-colors"></i></a>
+                                <a href="https://www.linkedin.com/in/nestro-brown-0b2734361/" target="_blank"><i class="ph ph-linkedin-logo text-xl text-gray-400 hover:text-cyan-400 cursor-pointer transition-colors"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="glass-effect rounded-lg overflow-hidden hover-glow group relative">
+                        <div class="animated-border"></div>
+                        <div class="relative z-10 p-6 flex flex-col items-center">
+                            <i class="ph ph-palette text-4xl text-purple-400 mb-4"></i>
+                            <h3 class="font-orbitron font-bold text-xl text-center mb-2 text-purple-400">Alex Rivera</h3>
+                            <p class="text-center text-blue-400 font-rajdhani font-semibold mb-4">UI/UX Designer</p>
+                            <p class="text-sm text-gray-300 text-center mb-4">Transforms complex ideas into intuitive, beautiful interfaces. Specialist in user research and design systems.</p>
+                            <div class="flex justify-center mt-2 space-x-3">
+                                <i class="ph ph-dribbble-logo text-xl text-gray-400 hover:text-purple-400 cursor-pointer transition-colors"></i>
+                                <i class="ph ph-behance-logo text-xl text-gray-400 hover:text-purple-400 cursor-pointer transition-colors"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 3 -->
+                    <div class="glass-effect rounded-lg overflow-hidden hover-glow group relative">
+                        <div class="animated-border"></div>
+                        <div class="relative z-10 p-6 flex flex-col items-center">
+                            <i class="ph ph-database text-4xl text-green-400 mb-4"></i>
+                            <h3 class="font-orbitron font-bold text-xl text-center mb-2 text-green-400">Maya Chen</h3>
+                            <p class="text-center text-teal-400 font-rajdhani font-semibold mb-4">Backend Engineer</p>
+                            <p class="text-sm text-gray-300 text-center mb-4">Backend architecture specialist with expertise in scalable systems, APIs, and cloud infrastructure.</p>
+                            <div class="flex justify-center mt-2 space-x-3">
+                                <i class="ph ph-github-logo text-xl text-gray-400 hover:text-green-400 cursor-pointer transition-colors"></i>
+                                <i class="ph ph-linkedin-logo text-xl text-gray-400 hover:text-green-400 cursor-pointer transition-colors"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 4 -->
+                    <div class="glass-effect rounded-lg overflow-hidden hover-glow group relative">
+                        <div class="animated-border"></div>
+                        <div class="relative z-10 p-6 flex flex-col items-center">
+                            <i class="ph ph-device-mobile text-4xl text-red-400 mb-4"></i>
+                            <h3 class="font-orbitron font-bold text-xl text-center mb-2 text-red-400">Jordan Kim</h3>
+                            <p class="text-center text-pink-400 font-rajdhani font-semibold mb-4">Mobile Developer</p>
+                            <p class="text-sm text-gray-300 text-center mb-4">React Native and Flutter expert creating seamless mobile experiences across platforms.</p>
+                            <div class="flex justify-center mt-2 space-x-3">
+                                <i class="ph ph-github-logo text-xl text-gray-400 hover:text-red-400 cursor-pointer transition-colors"></i>
+                                <i class="ph ph-linkedin-logo text-xl text-gray-400 hover:text-red-400 cursor-pointer transition-colors"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 5 -->
+                    <div class="glass-effect rounded-lg overflow-hidden hover-glow group relative">
+                        <div class="animated-border"></div>
+                        <div class="relative z-10 p-6 flex flex-col items-center">
+                            <i class="ph ph-robot text-4xl text-blue-400 mb-4"></i>
+                            <h3 class="font-orbitron font-bold text-xl text-center mb-2 text-blue-400">Zara Okafor</h3>
+                            <p class="text-center text-green-400 font-rajdhani font-semibold mb-4">AI/ML Engineer</p>
+                            <p class="text-sm text-gray-300 text-center mb-4">Machine learning specialist implementing AI solutions and intelligent automation systems.</p>
+                            <div class="flex justify-center mt-2 space-x-3">
+                                <i class="ph ph-github-logo text-xl text-gray-400 hover:text-blue-400 cursor-pointer transition-colors"></i>
+                                <i class="ph ph-linkedin-logo text-xl text-gray-400 hover:text-blue-400 cursor-pointer transition-colors"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 6 -->
+                    <div class="glass-effect rounded-lg overflow-hidden hover-glow group relative">
+                        <div class="animated-border"></div>
+                        <div class="relative z-10 p-6 flex flex-col items-center">
+                            <i class="ph ph-cloud text-4xl text-indigo-400 mb-4"></i>
+                            <h3 class="font-orbitron font-bold text-xl text-center mb-2 text-indigo-400">Sam Mitchell</h3>
+                            <p class="text-center text-purple-400 font-rajdhani font-semibold mb-4">DevOps Engineer</p>
+                            <p class="text-sm text-gray-300 text-center mb-4">Cloud infrastructure and deployment specialist ensuring scalable, secure, and efficient operations.</p>
+                            <div class="flex justify-center mt-2 space-x-3">
+                                <i class="ph ph-github-logo text-xl text-gray-400 hover:text-indigo-400 cursor-pointer transition-colors"></i>
+                                <i class="ph ph-linkedin-logo text-xl text-gray-400 hover:text-indigo-400 cursor-pointer transition-colors"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="min-h-screen py-20 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20">
+                    <h2 class="font-orbitron font-bold text-4xl md:text-6xl mb-6 text-pink-400">
+                        <i class="ph ph-lightning text-5xl mr-4"></i>
+                        Featured Projects
+                    </h2>
+                    <p class="font-rajdhani text-xl md:text-2xl text-gray-300 font-light max-w-3xl mx-auto">
+                        Showcasing our innovative solutions that blend creativity with cutting-edge technology.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-effect rounded-lg overflow-hidden hover-glow group">
+                        <div class="h-48 bg-gradient-to-br from-cyan-500 to-blue-600 relative overflow-hidden">
+                            <img src="/assets/todoana.png" alt="Advanced TO-DO Website" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="ph ph-tasks text-6xl text-white opacity-80"></i>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <div class="bg-black bg-opacity-50 px-2 py-1 rounded text-xs text-white">Web App</div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-orbitron font-bold text-xl mb-3 text-cyan-400">Advanced TO-DO Website</h3>
+                            <p class="text-gray-300 text-sm mb-4">A full-featured TO-DO application with persistent storage, theme switching, and analytics to track productivity.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-500 bg-opacity-20 text-blue-300 px-2 py-1 rounded text-xs">Bootstrap</span>
+                                <span class="bg-orange-500 bg-opacity-20 text-orange-300 px-2 py-1 rounded text-xs">HTML</span>
+                                <span class="bg-yellow-500 bg-opacity-20 text-yellow-300 px-2 py-1 rounded text-xs">Vanilla JS-ES6</span>
+                                <span class="bg-purple-500 bg-opacity-20 text-purple-300 px-2 py-1 rounded text-xs">CSS 3</span>
+                                <span class="bg-green-500 bg-opacity-20 text-green-300 px-2 py-1 rounded text-xs">Productivity</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="https://evilshxt.github.io/todo/" target="_blank" class="flex-1 bg-cyan-600 hover:bg-cyan-500 text-white text-center py-2 rounded transition-colors">
+                                    <i class="ph ph-arrow-square-out mr-2"></i>Live Demo
+                                </a>
+                                <a href="https://github.com/evilshxt/todo" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded transition-colors">
+                                    <i class="ph ph-github-logo"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card glass-effect rounded-lg overflow-hidden hover-glow group">
+                        <div class="h-48 bg-gradient-to-br from-amber-500 to-orange-600 relative overflow-hidden">
+                            <img src="/assets/brew.png" alt="Brew Haven Coffee Shop" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="ph ph-coffee text-6xl text-white opacity-80"></i>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <div class="bg-black bg-opacity-50 px-2 py-1 rounded text-xs text-white">Landing Page</div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-orbitron font-bold text-xl mb-3 text-orange-400">Brew Haven Coffee Shop</h3>
+                            <p class="text-gray-300 text-sm mb-4">A responsive landing page for a coffee shop with modern design elements and smooth animations.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-500 bg-opacity-20 text-blue-300 px-2 py-1 rounded text-xs">Bootstrap</span>
+                                <span class="bg-orange-500 bg-opacity-20 text-orange-300 px-2 py-1 rounded text-xs">HTML</span>
+                                <span class="bg-cyan-500 bg-opacity-20 text-cyan-300 px-2 py-1 rounded text-xs">Tailwind CSS</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="https://evilshxt.github.io/brewhaven/" target="_blank" class="flex-1 bg-orange-600 hover:bg-orange-500 text-white text-center py-2 rounded transition-colors">
+                                    <i class="ph ph-arrow-square-out mr-2"></i>Live Demo
+                                </a>
+                                <a href="https://github.com/evilshxt/brewhaven" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded transition-colors">
+                                    <i class="ph ph-github-logo"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card glass-effect rounded-lg overflow-hidden hover-glow group">
+                        <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 relative overflow-hidden">
+                            <img src="/assets/afro.png" alt="AfroCity Music Studio" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="ph ph-music-notes text-6xl text-white opacity-80"></i>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <div class="bg-black bg-opacity-50 px-2 py-1 rounded text-xs text-white">Studio Site</div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-orbitron font-bold text-xl mb-3 text-purple-400">AfroCity Music Studio</h3>
+                            <p class="text-gray-300 text-sm mb-4">Landing page for a music studio with smooth animations and a clean layout.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-500 bg-opacity-20 text-blue-300 px-2 py-1 rounded text-xs">Bootstrap</span>
+                                <span class="bg-orange-500 bg-opacity-20 text-orange-300 px-2 py-1 rounded text-xs">HTML</span>
+                                <span class="bg-cyan-500 bg-opacity-20 text-cyan-300 px-2 py-1 rounded text-xs">Tailwind CSS</span>
+                                <span class="bg-green-500 bg-opacity-20 text-green-300 px-2 py-1 rounded text-xs">AOS.js</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="https://evilshxt.github.io/afrocity/index.html" target="_blank" class="flex-1 bg-purple-600 hover:bg-purple-500 text-white text-center py-2 rounded transition-colors">
+                                    <i class="ph ph-arrow-square-out mr-2"></i>Live Demo
+                                </a>
+                                <a href="https://github.com/evilshxt/afrocity" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded transition-colors">
+                                    <i class="ph ph-github-logo"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-card glass-effect rounded-lg overflow-hidden hover-glow group">
+                        <div class="h-48 bg-gradient-to-br from-red-500 to-pink-600 relative overflow-hidden">
+                            <img src="/assets/todofire.png" alt="Firebase TO-DO App" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="ph ph-cloud text-6xl text-white opacity-80"></i>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <div class="bg-black bg-opacity-50 px-2 py-1 rounded text-xs text-white">Firebase App</div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-orbitron font-bold text-xl mb-3 text-red-400">Firebase TO-DO App</h3>
+                            <p class="text-gray-300 text-sm mb-4">TO-DO app with Firebase backend, theme switching, and analytics functionality.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-500 bg-opacity-20 text-blue-300 px-2 py-1 rounded text-xs">Bootstrap</span>
+                                <span class="bg-orange-500 bg-opacity-20 text-orange-300 px-2 py-1 rounded text-xs">HTML</span>
+                                <span class="bg-yellow-500 bg-opacity-20 text-yellow-300 px-2 py-1 rounded text-xs">Vanilla JS-ES6</span>
+                                <span class="bg-pink-500 bg-opacity-20 text-pink-300 px-2 py-1 rounded text-xs">Firebase</span>
+                                <span class="bg-green-500 bg-opacity-20 text-green-300 px-2 py-1 rounded text-xs">Productivity</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="https://evilshxt.github.io/todofire/" target="_blank" class="flex-1 bg-red-600 hover:bg-red-500 text-white text-center py-2 rounded transition-colors">
+                                    <i class="ph ph-arrow-square-out mr-2"></i>Live Demo
+                                </a>
+                                <a href="https://github.com/evilshxt/todofire" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded transition-colors">
+                                    <i class="ph ph-github-logo"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 5 -->
+                    <div class="project-card glass-effect rounded-lg overflow-hidden hover-glow group">
+                        <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 relative overflow-hidden">
+                            <img src="/assets/carecore.png" alt="CareCore Health Platform" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="ph ph-heartbeat text-6xl text-white opacity-80"></i>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <div class="bg-black bg-opacity-50 px-2 py-1 rounded text-xs text-white">Health Platform</div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-orbitron font-bold text-xl mb-3 text-green-400">CareCore Health Platform</h3>
+                            <p class="text-gray-300 text-sm mb-4">Comprehensive platform with AI chat, medical tools, real-time messaging, and e-commerce for health products.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-cyan-500 bg-opacity-20 text-cyan-300 px-2 py-1 rounded text-xs">Tailwind CSS</span>
+                                <span class="bg-orange-500 bg-opacity-20 text-orange-300 px-2 py-1 rounded text-xs">HTML</span>
+                                <span class="bg-yellow-500 bg-opacity-20 text-yellow-300 px-2 py-1 rounded text-xs">Vanilla JS-ES6</span>
+                                <span class="bg-pink-500 bg-opacity-20 text-pink-300 px-2 py-1 rounded text-xs">Firebase</span>
+                                <span class="bg-purple-500 bg-opacity-20 text-purple-300 px-2 py-1 rounded text-xs">AOS</span>
+                                <span class="bg-blue-500 bg-opacity-20 text-blue-300 px-2 py-1 rounded text-xs">Typed.js</span>
+                                <span class="bg-green-500 bg-opacity-20 text-green-300 px-2 py-1 rounded text-xs">GSAP</span>
+                                <span class="bg-red-500 bg-opacity-20 text-red-300 px-2 py-1 rounded text-xs">Health</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="https://carecore.vercel.app" target="_blank" class="flex-1 bg-green-600 hover:bg-green-500 text-white text-center py-2 rounded transition-colors">
+                                    <i class="ph ph-arrow-square-out mr-2"></i>Live Demo
+                                </a>
+                                <a href="https://github.com/evilshxt/carecore" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded transition-colors">
+                                    <i class="ph ph-github-logo"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 6 -->
+                    <div class="project-card glass-effect rounded-lg overflow-hidden hover-glow group">
+                        <div class="h-48 bg-gradient-to-br from-indigo-500 to-cyan-600 relative overflow-hidden">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="ph ph-sparkle text-6xl text-white opacity-80"></i>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <div class="bg-black bg-opacity-50 px-2 py-1 rounded text-xs text-white">
+                                    Interactive
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-orbitron font-bold text-xl mb-3 text-indigo-400">3D Portfolio Showcase</h3>
+                            <p class="text-gray-300 text-sm mb-4">Interactive 3D portfolio with Three.js animations and scroll-triggered effects. This Page.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-500 bg-opacity-20 text-blue-300 px-2 py-1 rounded text-xs">Three.js</span>
+                                <span class="bg-green-500 bg-opacity-20 text-green-300 px-2 py-1 rounded text-xs">GSAP</span>
+                                <span class="bg-cyan-500 bg-opacity-20 text-cyan-300 px-2 py-1 rounded text-xs">Tailwind</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="index.html" class="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white text-center py-2 rounded transition-colors">
+                                    <i class="ph ph-arrow-square-out mr-2"></i>Live Demo
+                                </a>
+                                <a href="#" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded transition-colors">
+                                    <i class="ph ph-github-logo"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="min-h-screen py-20 px-4 relative">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-20">
+                    <h2 class="font-orbitron font-bold text-4xl md:text-6xl mb-6 text-blue-400">
+                        <i class="ph ph-envelope text-5xl mr-4"></i>
+                        Get In Touch
+                    </h2>
+                    <p class="font-rajdhani text-xl md:text-2xl text-gray-300 font-light max-w-3xl mx-auto">
+                        Ready to bring your vision to life? Let's collaborate and create something extraordinary together.
+                    </p>
+                </div>
+                
+                <!-- Floating Contact Icons -->
+                <div class="absolute top-32 left-10 animate-float hidden md:block">
+                    <i class="ph ph-phone text-3xl text-cyan-400 opacity-60"></i>
+                </div>
+                <div class="absolute top-20 right-16 animate-bounce-slow hidden md:block">
+                    <i class="ph ph-chat-circle text-2xl text-pink-400 opacity-50"></i>
+                </div>
+                <div class="absolute bottom-32 left-20 animate-pulse-slow hidden md:block">
+                    <i class="ph ph-paper-plane text-2xl text-green-400 opacity-70"></i>
+                </div>
+                <div class="absolute bottom-20 right-12 animate-spin-slow hidden md:block">
+                    <i class="ph ph-at text-2xl text-orange-400 opacity-60"></i>
+                </div>
+                
+                <div class="glass-effect rounded-lg overflow-hidden hover-glow group relative p-8 md:p-12">
+                    <div class="animated-border"></div>
+                    <form action="https://formsubmit.co/brownnestro0@gmail.com" method="POST" class="relative z-10">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission from Team 404">
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div class="relative">
+                                <label class="block text-cyan-400 font-rajdhani font-semibold mb-2" for="name">
+                                    <i class="ph ph-user mr-2"></i>Full Name
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required
+                                    class="w-full bg-black bg-opacity-50 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-50 transition-all"
+                                    placeholder="Enter your full name"
+                                >
+                            </div>
+                            <div class="relative">
+                                <label class="block text-pink-400 font-rajdhani font-semibold mb-2" for="email">
+                                    <i class="ph ph-envelope mr-2"></i>Email Address
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required
+                                    class="w-full bg-black bg-opacity-50 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-opacity-50 transition-all"
+                                    placeholder="Enter your email"
+                                >
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-green-400 font-rajdhani font-semibold mb-2" for="subject">
+                                <i class="ph ph-tag mr-2"></i>Subject
+                            </label>
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                required
+                                class="w-full bg-black bg-opacity-50 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-green-400 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50 transition-all"
+                                placeholder="What's this about?"
+                            >
+                        </div>
+                        
+                        <div class="mb-8">
+                            <label class="block text-orange-400 font-rajdhani font-semibold mb-2" for="message">
+                                <i class="ph ph-chat-text mr-2"></i>Message
+                            </label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="6" 
+                                required
+                                class="w-full bg-black bg-opacity-50 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 transition-all resize-none"
+                                placeholder="Tell us about your project..."
+                            ></textarea>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button 
+                                type="submit" 
+                                class="bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-600 hover:to-pink-600 text-white font-orbitron font-bold px-8 py-4 rounded-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+                            >
+                                <i class="ph ph-paper-plane mr-2"></i>
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                    <div class="glass-effect bg-gradient-to-br from-cyan-800 to-blue-800 rounded-lg p-6 text-center hover-glow">
+                        <i class="ph ph-envelope text-3xl text-cyan-400 mb-3"></i>
+                        <h3 class="font-orbitron font-bold text-lg text-cyan-400 mb-2">Email</h3>
+                        <p class="text-gray-300 text-sm">brownnestro0@gmail.com</p>
+                    </div>
+                    <div class="glass-effect bg-gradient-to-br from-green-800 to-teal-800 rounded-lg p-6 text-center hover-glow">
+                        <i class="ph ph-phone text-3xl text-pink-400 mb-3"></i>
+                        <h3 class="font-orbitron font-bold text-lg text-pink-400 mb-2">Phone</h3>
+                        <p class="text-gray-300 text-sm">+233 (548) 697-052</p>
+                    </div>
+                    <div class="glass-effect bg-gradient-to-br from-pink-800 to-purple-800 rounded-lg p-6 text-center hover-glow">
+                        <i class="ph ph-map-pin text-3xl text-green-400 mb-3"></i>
+                        <h3 class="font-orbitron font-bold text-lg text-green-400 mb-2">Location</h3>
+                        <p class="text-gray-300 text-sm">Remote Worldwide</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="relative z-10 py-8 px-4 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="font-orbitron font-bold text-xl gradient-text">TEAM 404</h3>
+                    <p class="text-gray-400 text-sm">Innovation at Scale</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/evilshxt" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                        <i class="ph ph-github-logo text-2xl"></i>
+                    </a>
+                    <a href="https://dribbble.com/evilshxt" class="text-gray-400 hover:text-pink-400 transition-colors">
+                        <i class="ph ph-dribbble-logo text-2xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nestro-brown-0b2734361/" class="text-gray-400 hover:text-blue-500 transition-colors">
+                        <i class="ph ph-linkedin-logo text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">
+                        <i class="ph ph-behance-logo text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-6 pt-6 border-t border-gray-800 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2025 Team 404. All rights reserved. Built with passion and innovation.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/js/mainpage.js"></script>
+</body>
+</html>

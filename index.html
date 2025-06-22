@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team 404 - Creative Developers & Digital Architects</title>
+  <meta name="description" content="Team 404: Creative developers, designers, and digital architects. Explore our portfolio, projects, and team. Innovation meets excellence.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://team404-wed.vercel.app/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Team 404 - Creative Developers & Digital Architects">
+  <meta property="og:description" content="Team 404: Creative developers, designers, and digital architects. Explore our portfolio, projects, and team. Innovation meets excellence.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://team404-wed.vercel.app/">
+  <meta property="og:image" content="/assets/favicon.png">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Team 404 - Creative Developers & Digital Architects">
+  <meta name="twitter:description" content="Team 404: Creative developers, designers, and digital architects. Explore our portfolio, projects, and team. Innovation meets excellence.">
+  <meta name="twitter:image" content="/assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;800&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/css/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/css/phosphor.css">
+</head>
+<body class="bg-black text-white font-exo overflow-x-hidden">
+  <!-- Matrix Background -->
+  <canvas id="matrix-canvas" class="matrix-bg"></canvas>
+  
+  <!-- Three.js Canvas -->
+  <canvas id="three-canvas" class="three-canvas"></canvas>
+  
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+  
+  <!-- Floating Icons -->
+  <div class="fixed top-10 left-10 z-20">
+    <i class="ph ph-gear text-4xl text-cyan-400 animate-spin-slow opacity-70"></i>
+  </div>
+  <div class="fixed top-20 right-20 z-20">
+    <i class="ph ph-circuit-board text-3xl text-pink-400 icon-pulse opacity-60"></i>
+  </div>
+  <div class="fixed bottom-20 left-16 z-20">
+    <i class="ph ph-cpu text-3xl text-orange-400 animate-float opacity-50"></i>
+  </div>
+  <div class="fixed top-1/2 right-10 z-20">
+    <i class="ph ph-hard-drives text-2xl text-green-400 animate-bounce-slow opacity-40"></i>
+  </div>
+  
+  <!-- Section 1: Hero -->
+  <section class="min-h-screen flex items-center justify-center relative z-10">
+    <div class="text-center px-4 max-w-4xl">
+      <div class="mb-8">
+        <i class="ph ph-code text-6xl md:text-8xl text-cyan-400 animate-pulse-slow"></i>
+      </div>
+      <h1 class="font-orbitron font-black text-4xl md:text-7xl lg:text-8xl mb-6 gradient-text">
+        TEAM 404
+      </h1>
+      <p class="font-rajdhani text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 font-light">
+        Where Innovation Meets Excellence
+      </p>
+      <div class="flex justify-center items-center space-x-6">
+        <i class="ph ph-lightning text-2xl text-yellow-400 animate-bounce"></i>
+        <span class="font-exo text-lg md:text-xl text-cyan-300">Scroll to Experience</span>
+        <i class="ph ph-arrow-down text-2xl text-cyan-400 animate-bounce"></i>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Section 2: Tech Stack -->
+  <section class="min-h-screen flex items-center justify-center relative z-10">
+    <div class="text-center px-4 max-w-6xl">
+      <h2 class="font-orbitron font-bold text-3xl md:text-5xl mb-16 text-cyan-400">
+        <i class="ph ph-stack text-4xl mr-4"></i>
+        Our Tech Arsenal
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="glass-effect rounded-lg p-6 hover-glow cursor-pointer">
+          <i class="ph ph-code text-4xl text-blue-400 mb-4"></i>
+          <h3 class="font-rajdhani font-semibold text-xl">Frontend</h3>
+        </div>
+        <div class="glass-effect rounded-lg p-6 hover-glow cursor-pointer">
+          <i class="ph ph-database text-4xl text-green-400 mb-4"></i>
+          <h3 class="font-rajdhani font-semibold text-xl">Backend</h3>
+        </div>
+        <div class="glass-effect rounded-lg p-6 hover-glow cursor-pointer">
+          <i class="ph ph-device-mobile text-4xl text-purple-400 mb-4"></i>
+          <h3 class="font-rajdhani font-semibold text-xl">Mobile</h3>
+        </div>
+        <div class="glass-effect rounded-lg p-6 hover-glow cursor-pointer">
+          <i class="ph ph-cloud text-4xl text-orange-400 mb-4"></i>
+          <h3 class="font-rajdhani font-semibold text-xl">Cloud</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Section 3: Process -->
+  <section class="min-h-screen flex items-center justify-center relative z-10">
+    <div class="text-center px-4 max-w-6xl">
+      <h2 class="font-orbitron font-bold text-3xl md:text-5xl mb-16 text-pink-400">
+        <i class="ph ph-flow-arrow text-4xl mr-4"></i>
+        Our Process
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-effect rounded-lg p-8 hover-glow">
+          <i class="ph ph-lightbulb text-5xl text-yellow-400 mb-6 animate-pulse"></i>
+          <h3 class="font-rajdhani font-bold text-2xl mb-4">Ideate</h3>
+          <p class="text-gray-300">Brainstorm innovative solutions</p>
+        </div>
+        <div class="glass-effect rounded-lg p-8 hover-glow">
+          <i class="ph ph-hammer text-5xl text-cyan-400 mb-6 animate-bounce-slow"></i>
+          <h3 class="font-rajdhani font-bold text-2xl mb-4">Build</h3>
+          <p class="text-gray-300">Craft with precision and care</p>
+        </div>
+        <div class="glass-effect rounded-lg p-8 hover-glow">
+          <i class="ph ph-rocket text-5xl text-purple-400 mb-6 animate-float"></i>
+          <h3 class="font-rajdhani font-bold text-2xl mb-4">Launch</h3>
+          <p class="text-gray-300">Deploy to make an impact</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Section 4: Call to Action -->
+  <section class="min-h-screen flex items-center justify-center relative z-10">
+    <div class="text-center px-4 max-w-4xl">
+      <div class="mb-8">
+        <i class="ph ph-rocket-launch text-6xl md:text-8xl text-purple-400 animate-float"></i>
+      </div>
+      <h2 class="font-orbitron font-black text-4xl md:text-6xl mb-8 gradient-text">
+        Ready to Explore?
+      </h2>
+      <p class="font-rajdhani text-xl md:text-2xl text-gray-300 mb-12 font-light">
+        Dive into our world of innovation and creativity
+      </p>
+      <button id="enter-btn" class="glass-effect hover-glow px-8 py-4 rounded-lg font-rajdhani font-bold text-xl border-2 border-cyan-400 text-cyan-400 transition-all duration-300 hover:bg-cyan-400 hover:text-black">
+        <i class="ph ph-arrow-right mr-2"></i>
+        Enter Portfolio
+      </button>
+      <div class="mt-8 flex justify-center">
+        <i class="ph ph-arrow-down text-3xl text-cyan-400 animate-bounce"></i>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Redirect to main.html if needed (example: after button click)
+    document.getElementById('enter-btn')?.addEventListener('click', function() {
+      window.location.href = 'src/main.html';
+    });
+  </script>
+  <script type="module" src="/src/js/index.js"></script>
+</body>
+</html>

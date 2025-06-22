@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+body {
+  overflow-x: hidden;
+}
+
+.matrix-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  background: radial-gradient(circle at center, #0a0a0a 0%, #000000 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #00bcd4, #e91e63, #ff9800, #4caf50);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.icon-pulse {
+  animation: pulse 2s infinite;
+}
+
+.three-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  pointer-events: none;
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #00bcd4, #e91e63);
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 50;
+} 
